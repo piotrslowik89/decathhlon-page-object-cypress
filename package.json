@@ -1,0 +1,36 @@
+{
+  "name": "decathhlon-page-object-cypress",
+  "version": "1.0.0",
+  "description": "Testy automatyczne cypress",
+  "main": "index.js",
+  "scripts": {
+    "open": "npx cypress open",
+    "all": "npx cypress run",
+    "spec": "npx cypress run --spec 'cypress/integration/jakis_test.js' --headed",
+    "chrome": "npx cypress run all-- --browser chrome --headed",
+    "firefox": "npm run all -- --browser firefox",
+    "browser": "npm run all -- --browser firefox & npm run all -- --browser edge",
+    "delete:reports": "rm -r cypress/results/* || true",
+    "prereport": "npm run delete:reports",
+    "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json",
+    "mochawesome:html": "npx marge mochawesome.json",
+    "full:test": "npm run delete:reports && npm run all && npm run mochawesome:merge && npm run mochawesome:html"
+  },
+  "keywords": [
+    "cypress",
+    "testy",
+    "automatyczne"
+  ],
+  "author": "Piotr Slowik",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.1.0"
+  },
+  "devDependencies": {
+    "cypress-multi-reporters": "^1.6.2",
+    "mocha-junit-reporter": "^2.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
