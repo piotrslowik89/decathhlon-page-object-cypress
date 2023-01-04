@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
 
-    baseUrl: 'https://duckduckgo.com/',
+    baseUrl: 'http://decathlon.pl/',
     includeShadowDom: true,
     chromeWebSecurity: false,
     viewportHeight: 1080,
