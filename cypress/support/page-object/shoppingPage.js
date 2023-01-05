@@ -34,7 +34,7 @@ class ShoppingPage {
         return cy.contains('Kamizelki męskie')
     }
     get choseOfVest() {
-        return cy.get('div.dpb-holder:nth-child(16) > div:nth-child(4) > a:nth-child(1)')
+        return cy.get('#app > main > div.list-body.svelte-5yifbg > div.listing-main.svelte-5yifbg > section > div > div:nth-child(15) > div.dpb-informations.svelte-y5q9xg > a')
     }
     get choseOfColor() {
         return cy.get('button.svelte-1bgo2ih:nth-child(2)')

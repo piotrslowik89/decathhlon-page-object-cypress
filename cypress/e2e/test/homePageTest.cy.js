@@ -1,5 +1,6 @@
 /// <reference types = "cypress" />
 
+import CartPage from "../../support/page-object/cartPage";
 import HomePage from "../../support/page-object/homePage"
 import ShoppingPage from "../../support/page-object/shoppingPage";
 
@@ -28,6 +29,8 @@ describe("E2E - Home Page", () => {
         ShoppingPage.womensChoice()
         ShoppingPage.mensChoice()
         ShoppingPage.childsChoice()
+        CartPage.goToCart()
+        CartPage.goToDelivery()
 
     });
 })
